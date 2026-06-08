@@ -23,6 +23,12 @@ Install all dependencies in one step:
 pip install -r requirements.txt
 ```
 
+To set up the documentation site, install the Node dependencies as well:
+
+```bash
+npm install
+```
+
 ## Run
 
 Start the app from the project root:
@@ -95,4 +101,3 @@ The backend uses these `model_status` values:
 - `error`
 
 If the webcam or model cannot start, the server stays up and the browser shows the error state.
-

@@ -5,10 +5,10 @@ from typing import Any
 import cv2
 
 from app.protocol import Alert, Detection
-from app.student_logic import build_alerts, build_metadata
 
 
 def inference_pipe(frame) -> tuple[Any, list[Detection], list[Alert], dict[str, Any]]:
+    # Replace this scaffold with the student's real inference pipeline.
     detections: list[Detection] = [
         {
             "label": "PLACEHOLDER_OBJECT",
@@ -23,7 +23,12 @@ def inference_pipe(frame) -> tuple[Any, list[Detection], list[Alert], dict[str, 
             "severity": "low",
         }
     ]
-    metadata = build_metadata(detections, fps=0.0, model_status="loading")
+    metadata: dict[str, Any] = {
+        "note": "placeholder metadata",
+        "detection_count": len(detections),
+        "fps": 0.0,
+        "model_status": "loading",
+    }
 
     annotated = frame.copy()
     for detection in detections:
@@ -40,5 +45,4 @@ def inference_pipe(frame) -> tuple[Any, list[Detection], list[Alert], dict[str, 
             cv2.LINE_AA,
         )
 
-    alerts = build_alerts(detections) or alerts
     return annotated, detections, alerts, metadata

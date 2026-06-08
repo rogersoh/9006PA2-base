@@ -1,0 +1,12 @@
+{
+  "name": "9006pa2-base",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "docs": "astro dev --root docs"
+  },
+  "devDependencies": {
+    "@astrojs/starlight": "^0.34.0",
+    "astro": "^5.0.0"
+  }
+}

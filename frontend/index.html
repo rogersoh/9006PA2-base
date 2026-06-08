@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV Base App</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="viewer">
+        <img id="video" alt="Annotated webcam stream" />
+      </section>
+      <aside class="panel">
+        <div class="status-row">FPS: <span id="fps">0.0</span></div>
+        <div class="status-row">Model: <span id="model-status">loading</span></div>
+        <div id="error" class="error hidden"></div>
+        <div id="alerts" class="alerts"></div>
+      </aside>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -27,9 +27,9 @@ http://127.0.0.1:8000
 
 Start with the student-facing files:
 
-- `app/student_pipeline.py`
-- `app/student_logic.py`
-- `app/student_config.py`
+- `app/student_pipeline.py`: load the model and run inference on frames
+- `app/student_logic.py`: Use detections to parse alert messages and metadata
+- `app/student_config.py`: app behavior settings
 
 ## What To Expect
 
@@ -42,5 +42,5 @@ Start with the student-facing files:
 
 If you change the runtime contract, update these docs too:
 
-- [`App Architecture`](./architecture)
-- [`inference_pipe` Contract](./inference-pipe)
+- [`App Architecture`](../architecture)
+- [`inference_pipe` Contract](../inference-pipe)

@@ -6,7 +6,7 @@ import cv2
 
 from app.protocol import Alert, Detection
 
-from student_logic import build_alerts, build_metadata
+from app.student_logic import build_alerts, build_metadata
 
 # TO EDIT
 ### Example: loading pre-trained YOLO26 for object detection (COCO 80 classes).

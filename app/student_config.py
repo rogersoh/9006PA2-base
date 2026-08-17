@@ -9,10 +9,10 @@ JPEG_QUALITY = 80
 
 # Path to the trained YOLO model weights.
 # Update this if best.pt lives somewhere else (e.g. "runs/detect/train/weights/best.pt").
-MODEL_PATH = "best.pt"
+MODEL_PATH = "best.onnx" # onnx format
 
 # Minimum confidence for a YOLO detection to be kept.
-CONFIDENCE_THRESHOLD = 0.5
+CONFIDENCE_THRESHOLD = 0.45
 
 # Banana ripeness classes the model was trained on.
 RIPENESS_CLASSES = ["overripe", "ripe", "rotten", "unripe"]

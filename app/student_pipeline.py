@@ -15,6 +15,7 @@ from app.student_config import MODEL_PATH, CONFIDENCE_THRESHOLD, RIPENESS_COLORS
 ### `inference_pipe` will be called on every frame, so make sure to load your model
 ### here so you don't have to re-load it on every frame.
 from ultralytics import YOLO
+
 model = YOLO(MODEL_PATH)
 
 _DEFAULT_BOX_COLOR = (255, 255, 255)

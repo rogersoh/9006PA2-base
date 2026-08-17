@@ -101,3 +101,4 @@ The backend uses these `model_status` values:
 - `error`
 
 If the webcam or model cannot start, the server stays up and the browser shows the error state.
+# 9006PA2-base

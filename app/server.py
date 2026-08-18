@@ -174,4 +174,5 @@ async def _send_frame(websocket: WebSocket, jpeg: bytes) -> None:
 
 
 def run() -> None:
-    uvicorn.run("app.server:app", host="127.0.0.1", port=8000, reload=False)
+    # uvicorn.run("app.server:app", host="127.0.0.1", port=8000, reload=False)
+    uvicorn.run("app.server:app", host="0.0.0.0", port=8000, reload=False)

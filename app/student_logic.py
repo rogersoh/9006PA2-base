@@ -13,17 +13,6 @@ _RIPENESS_MESSAGES = {
     "rotten": "Rotten banana detected — discard.",
 }
 
-
-# def build_alerts(detections: list[Detection]) -> list[Alert]:
-#     # Students replace this with real post-processing rules.
-#     return [
-#         {
-#             "type": "PLACEHOLDER_ALERT",
-#             "message": "Placeholder alert from the base scaffold.",
-#             "severity": "low",
-#         }
-#     ]
-
 def build_alerts(detections: list[Detection]) -> list[Alert]:
     # Alert on every ripeness detection (overripe / ripe / rotten / unripe).
     # Severity and messaging are keyed off the ripeness class itself rather
@@ -45,14 +34,6 @@ def build_alerts(detections: list[Detection]) -> list[Alert]:
             }
         )
     return alerts
-
-# def build_metadata(detections: list[Detection], alerts: list[Alert]) -> dict[str, Any]:
-#     # Keep this scaffold intentionally small and easy to replace.
-#     return {
-#         "note": "placeholder metadata",
-#         "detection_count": len(detections),
-#         "alert_count": len(alerts),
-#     }
 
 def build_metadata(detections: list[Detection], alerts: list[Alert]) -> dict[str, Any]:
     ripeness_counts = Counter(detection["label"] for detection in detections)
